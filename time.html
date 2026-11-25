@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time and Schedule | Fraser Valley Food Shield</title>
+  <meta name="description" content="Schedule, Gantt chart from 2027 to 2029, lifecycle models, and process groups for Fraser Valley FoodShield.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">FV</span>
+        <span>
+          <strong>Fraser Valley Food Shield</strong>
+          <small>Academic project proposal · UFV</small>
+        </span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container nav-bar">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="scope.html">Scope</a></li>
+          <li><a href="time.html" aria-current="page">Schedule</a></li>
+          <li><a href="cost.html">Cost</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="risk-quality.html">Risk &amp; Quality</a></li>
+          <li><a href="closing.html">Closing</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-intro">
+      <div class="container">
+        <p class="eyebrow">Time and schedule</p>
+        <h1>Three years, two lifecycles, one deadline</h1>
+        <p>The baseline runs from January 1, 2027 to December 31, 2029. Buildings follow a waterfall. The logistics platform follows a spiral. Both must be finished in time for one full-scale exercise and a real handover.</p>
+      </div>
+    </header>
+
+    <div class="container content">
+      <nav class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <ol>
+          <li><a href="#approach">Scheduling approach</a></li>
+          <li><a href="#lifecycle">Lifecycle model</a></li>
+          <li><a href="#process">Five process groups</a></li>
+          <li><a href="#gantt">Gantt chart, 2027–2029</a></li>
+          <li><a href="#milestones">Milestones</a></li>
+          <li><a href="#path">Critical path and float</a></li>
+          <li><a href="#control">Baseline and change control</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="approach">Scheduling approach</h2>
+      <p>This page is a Level-2 planning schedule. It is accurate enough to show phase logic, gates, and the deadline. It is not a critical-path method network with durations in days, because those durations would be invented before sites, soils, and vendors are known. During planning, each work package in the <a href="scope.html#wbs">work breakdown structure</a> will receive an activity list, duration estimates, logic ties, and a resource load (PMI, 2017; Larson &amp; Gray, 2021). The quarter bars below are the envelope those detailed schedules must fit.</p>
+      <p>Calendars respect construction seasons in a wet valley, but they do not assume that winter is lost. Interior fit-out, equipment setting, software spirals, reserve contracting, and training continue through the wet months. What the schedule refuses to do is commission cold rooms, fill them, and exercise them in the same month. Temperature mapping, staff competency, and a stock reconciliation each need their own window.</p>
+
+      <h2 id="lifecycle">Lifecycle model</h2>
+      <p>Using one lifecycle for the whole program would either freeze the software too early or keep redesigning the buildings too late. The program therefore runs two predictive models on purpose, and integrates them at named gates.</p>
+      <h3>Waterfall for physical infrastructure and fleet hardware</h3>
+      <p>Hubs, refrigeration, depots, and vehicle specifications follow a sequential model: requirements, design, build, commission, hand over. A cold room sized incorrectly is expensive to reopen, and a flood elevation chosen after the slab is poured is not a design choice. The first hub, Abbotsford, is the prototype. Its requirements and design are approved before construction starts. Later hubs repeat that specification with site-specific civil works, which is faster than inventing five architectures. Fleet hardware is the same kind of problem. The duty cycle, including the grade and the winter temperature east of Chilliwack, is frozen before units are ordered. Change after the order is a formal change, because a mixed fleet that was not planned is a maintenance burden for the municipalities that inherit it.</p>
+      <h3>Spiral, with agile delivery inside it, for the digital platform</h3>
+      <p>Boehm’s spiral model is organized around risk, not around a single requirements freeze (Boehm, 1988). Each cycle sets objectives, analyses risk, builds a prototype or increment, and evaluates it before the next commitment. That fits a logistics platform whose hardest risks are adoption, offline behaviour, privacy, and interface with municipal staff who do not yet exist as a team. Inside each spiral, the product owner runs short iterations, a backlog, and working software reviews, which is the agile practice appropriate to a defined increment (Project Management Institute &amp; Agile Alliance, 2017).</p>
+      <p>Five spirals are planned:</p>
+      <ol>
+        <li><strong>Discovery (second half of 2027).</strong> Allocation rules, offline scenarios, and privacy constraints. The prototype may be a clickable process, not a production system.</li>
+        <li><strong>Inventory truth (2028).</strong> Lot, location, temperature-alarm status, and recall. Alarms also exist on a path that does not depend on this software.</li>
+        <li><strong>Allocation (late 2028 to early 2029).</strong> The published priority rule applied to on-hand stock and to community points.</li>
+        <li><strong>Fleet and field (first half of 2029).</strong> Dispatch, proof of delivery, and devices that degrade gracefully.</li>
+        <li><strong>Hardening (second and third quarters of 2029).</strong> Security test, disconnect test, and operational acceptance. No new functional scope in this spiral except defect repair.</li>
+      </ol>
+      <p>The integration rule is simple. The full-scale exercise in the third quarter of 2029 uses both the commissioned physical network and the hardened platform. A spiral that misses that exercise does not get a quiet extension past December 31. Features that are not required for inventory truth, allocation, and offline operation are the first items on the <a href="cost.html#controls">descoping ladder</a>.</p>
+
+      <h2 id="process">Five process groups</h2>
+      <p>The sixth edition of the PMBOK Guide describes five process groups. They are not five phases that occur once. Monitoring and controlling runs beside the other groups for the life of the project (PMI, 2017). The seventh edition later reorganized the standard around principles and performance domains (PMI, 2021). This proposal keeps the five groups because they make the control story legible, and it uses the later edition as a warning against treating the groups as bureaucracy. Stewardship and uncertainty still apply: a green dashboard that hides a site the team does not control is not control.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Table 5. Process groups applied to FoodShield</caption>
+          <thead>
+            <tr>
+              <th scope="col">Process group</th>
+              <th scope="col">When it is heaviest</th>
+              <th scope="col">FoodShield work</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Initiating</th>
+              <td>Q1–Q2 2027</td>
+              <td>Charter, identification of rightsholders and stakeholders, business case, and the decision that this document is a classroom authorization unless real authorities adopt it.</td>
+            </tr>
+            <tr>
+              <th scope="row">Planning</th>
+              <td>Q2–Q4 2027, then replanned at each gate</td>
+              <td>Scope baseline, schedule baseline, cost baseline, procurement plan, quality plan, risk register, communications plan, and the locked census extract.</td>
+            </tr>
+            <tr>
+              <th scope="row">Executing</th>
+              <td>Q4 2027–Q3 2029</td>
+              <td>Design and construction, fleet purchase, software spirals, first-fill reserves, hiring, training, and exercises.</td>
+            </tr>
+            <tr>
+              <th scope="row">Monitoring and controlling</th>
+              <td>January 2027–December 2029</td>
+              <td>Earned value each month, change control, quality audits, risk reviews, privacy incidents, and quarterly go, adjust, or stop gates.</td>
+            </tr>
+            <tr>
+              <th scope="row">Closing</th>
+              <td>Q3–Q4 2029, with records kept throughout</td>
+              <td>Contract closeout, asset transfer, lessons learned, financial reconciliation, and acceptance by receiving authorities. See the <a href="closing.html">closing page</a>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="gantt">Gantt chart, 2027–2029</h2>
+      <p>Each column is a calendar quarter. Bars show the planning envelope. Diamonds are milestones. The text table under the chart states the same dates for anyone who cannot use the graphic, and it is the version that should be cited in a review.</p>
+            <p class="gantt-scroll-hint">Scroll horizontally to follow the timeline through December 31, 2029. Task names stay fixed on the left.</p>
+      <ol class="dep-key" aria-label="Critical path sequence">
+        <li>Charter</li>
+        <li>Hub design</li>
+        <li>Construction</li>
+        <li>Cold-chain commissioning</li>
+        <li>Exercise</li>
+        <li>Handover</li>
+      </ol>
+      <div class="gantt-wrap" tabindex="0">
+        <div class="gantt" aria-label="Gantt chart of Fraser Valley FoodShield from the first quarter of 2027 through December 31, 2029. A data table follows with the same dates.">
+          <div class="gantt-flag" aria-hidden="true"><span class="gantt-flag-line"></span></div>
+          <div class="gantt-row gantt-years">
+            <div class="gantt-label">Year</div>
+            <div class="year" style="--c:1;--s:4">2027</div>
+            <div class="year" style="--c:5;--s:4">2028</div>
+            <div class="year" style="--c:9;--s:4">2029</div>
+          </div>
+          <div class="gantt-row gantt-halves">
+            <div class="gantt-label">Half-year</div>
+            <div class="half" style="--c:1;--s:2">H1</div>
+            <div class="half" style="--c:3;--s:2">H2</div>
+            <div class="half" style="--c:5;--s:2">H1</div>
+            <div class="half" style="--c:7;--s:2">H2</div>
+            <div class="half" style="--c:9;--s:2">H1</div>
+            <div class="half" style="--c:11;--s:2">H2 · 31 Dec</div>
+          </div>
+          <div class="gantt-row gantt-quarters">
+            <div class="gantt-label">Quarter</div>
+            <div class="qtr">Q1</div><div class="qtr">Q2</div><div class="qtr">Q3</div><div class="qtr">Q4</div>
+            <div class="qtr">Q1</div><div class="qtr">Q2</div><div class="qtr">Q3</div><div class="qtr">Q4</div>
+            <div class="qtr">Q1</div><div class="qtr">Q2</div><div class="qtr">Q3</div><div class="qtr">Q4</div>
+          </div>
+          <div class="gantt-row gantt-flag-row">
+            <div class="gantt-label">Deadline</div>
+            <div class="handover-pin" style="--c:9;--s:4">★ December 31, 2029: Mandatory Final Handover &amp; Project Closure</div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label"><span>Initiating</span> <abbr class="cp-badge" title="Critical path">CP</abbr></div>
+            <div class="bar bar-plan bar-critical" style="--c:1;--s:2" title="January to June 2027"><span class="bar-name">Charter and engagement</span><span class="bar-meta">100% planned · Jan–Jun 2027</span><span class="dep-next" aria-hidden="true">→</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Planning baseline</div>
+            <div class="bar bar-plan" style="--c:2;--s:3" title="April to December 2027"><span class="bar-name">Scope, schedule, cost</span><span class="bar-meta">100% planned · Apr–Dec 2027</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label"><span>Hub design (waterfall)</span> <abbr class="cp-badge" title="Critical path">CP</abbr></div>
+            <div class="bar bar-build bar-critical" style="--c:3;--s:4" title="July 2027 to June 2028"><span class="bar-name">Prototype, then repeat</span><span class="bar-meta">100% planned · Jul 2027–Jun 2028</span><span class="dep-next" aria-hidden="true">→</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label"><span>Hub construction</span> <abbr class="cp-badge" title="Critical path">CP</abbr></div>
+            <div class="bar bar-build bar-critical" style="--c:5;--s:6" title="January 2028 to June 2029"><span class="bar-name">Build and commission</span><span class="bar-meta">100% planned · Jan 2028–Jun 2029</span><span class="dep-next" aria-hidden="true">→</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label"><span>Cold chain and utilities</span> <abbr class="cp-badge" title="Critical path">CP</abbr></div>
+            <div class="bar bar-build bar-critical" style="--c:4;--s:6" title="October 2027 to March 2029"><span class="bar-name">Power, HVAC, water</span><span class="bar-meta">100% planned · Oct 2027–Mar 2029</span><span class="dep-next" aria-hidden="true">→</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Fleet procurement</div>
+            <div class="bar bar-build" style="--c:3;--s:6" title="July 2027 to December 2028"><span class="bar-name">Duty cycle, then order</span><span class="bar-meta">100% planned · Jul 2027–Dec 2028</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Fleet in service</div>
+            <div class="bar bar-build" style="--c:9;--s:2" title="January to June 2029"><span class="bar-name">Initial capability</span><span class="bar-meta">100% planned · Jan–Jun 2029</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Digital spiral 1</div>
+            <div class="bar bar-digital" style="--c:3;--s:2" title="July to December 2027"><span class="bar-name">Discovery</span><span class="bar-meta">100% planned · Jul–Dec 2027</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Digital spirals 2–4</div>
+            <div class="bar bar-digital" style="--c:5;--s:6" title="January 2028 to June 2029"><span class="bar-name">Inventory, allocation, field</span><span class="bar-meta">100% planned · Jan 2028–Jun 2029</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Digital spiral 5</div>
+            <div class="bar bar-digital" style="--c:10;--s:2" title="April to September 2029"><span class="bar-name">Harden and disconnect test</span><span class="bar-meta">100% planned · Apr–Sep 2029</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label"><span>Reserve first fill</span> <abbr class="cp-badge" title="Critical path">CP</abbr></div>
+            <div class="bar bar-build bar-critical" style="--c:6;--s:4" title="April 2028 to March 2029"><span class="bar-name">Contract and fill</span><span class="bar-meta">100% planned · Apr 2028–Mar 2029</span><span class="dep-next" aria-hidden="true">→</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Training and exercises</div>
+            <div class="bar bar-drill" style="--c:5;--s:7" title="January 2028 to September 2029"><span class="bar-name">Build competency</span><span class="bar-meta">100% planned · Jan 2028–Sep 2029</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">Monitoring and controlling</div>
+            <div class="bar bar-control" style="--c:1;--s:12" title="January 2027 to December 2029"><span class="bar-name">Monthly control, quarterly gates</span><span class="bar-meta">100% planned · Jan 2027–Dec 2029</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label"><span>Closing and handover</span> <abbr class="cp-badge" title="Critical path">CP</abbr></div>
+            <div class="bar bar-close bar-critical" style="--c:11;--s:2" title="July to December 2029"><span class="bar-name">Transfer ownership</span><span class="bar-meta">100% planned · Jul–Dec 2029</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">M1 Charter approved</div>
+            <div class="mile" style="--c:2;--s:1" title="June 30, 2027"><span>M1</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">M2 Integrated baseline</div>
+            <div class="mile" style="--c:4;--s:1" title="December 31, 2027"><span>M2</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">M3 Abbotsford hub</div>
+            <div class="mile" style="--c:8;--s:1" title="December 31, 2028"><span>M3</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">M4 Fleet capability</div>
+            <div class="mile" style="--c:9;--s:1" title="March 31, 2029"><span>M4</span></div>
+          </div>
+          <div class="gantt-row">
+            <div class="gantt-label">M5 Platform candidate</div>
+            <div class="mile" style="--c:10;--s:1" title="June 30, 2029"><span>M5</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label">M6 Full-scale exercise</div>
+            <div class="mile mile-critical" style="--c:11;--s:1" title="September 30, 2029"><span>M6</span></div>
+          </div>
+          <div class="gantt-row is-critical">
+            <div class="gantt-label">M7 Handover complete</div>
+            <div class="mile mile-final" style="--c:12;--s:1" title="December 31, 2029"><span>M7</span></div>
+          </div>
+        </div>
+      </div>
+      <ul class="legend legend-key" aria-label="Schedule legend">
+        <li><span class="swatch bar-build"></span> Primary infrastructure (waterfall)</li>
+        <li><span class="swatch bar-digital"></span> Software sprints (agile/spiral)</li>
+        <li><span class="swatch bar-drill"></span> Testing and simulation drills</li>
+        <li><span class="swatch swatch-mile" aria-hidden="true"></span> Mandatory project milestones</li>
+        <li><span class="swatch swatch-cp" aria-hidden="true"></span> Critical path indicator</li>
+        <li><span class="swatch bar-plan"></span> Initiating and planning</li>
+        <li><span class="swatch bar-control"></span> Monitoring and controlling</li>
+        <li><span class="swatch bar-close"></span> Closing</li>
+      </ul>
+      <p class="table-note">Figure 1. Level-2 Gantt envelope. Every bar is 100% planned, which means the baseline window is fully scheduled, not that the work is already finished. Diamonds mark the milestone quarter, not a claim that the event occupies the whole quarter. Exact dates are in Table 6. The gold dashed line is December 31, 2029.</p>
+
+      <h2 id="milestones">Milestones</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Table 6. Milestone baseline</caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Milestone</th>
+              <th scope="col">Date</th>
+              <th scope="col">Gate question</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">M1</th>
+              <td>Charter approved</td>
+              <td>June 30, 2027</td>
+              <td>Is the purpose, the ceiling, and the fictional nature of the authority written clearly enough that later staff cannot mistake it for a bylaw?</td>
+            </tr>
+            <tr>
+              <th scope="row">M2</th>
+              <td>Integrated baseline</td>
+              <td>December 31, 2027</td>
+              <td>Are scope, schedule, and cost baselined together, with the census extract locked and sites identified?</td>
+            </tr>
+            <tr>
+              <th scope="row">M3</th>
+              <td>Abbotsford hub substantial completion</td>
+              <td>December 31, 2028</td>
+              <td>Does the prototype hub prove the repeated specification before the other hubs copy a mistake?</td>
+            </tr>
+            <tr>
+              <th scope="row">M4</th>
+              <td>Fleet initial operating capability</td>
+              <td>March 31, 2029</td>
+              <td>Can the fleet make the 24-hour community-point target, including the Hope run in winter conditions?</td>
+            </tr>
+            <tr>
+              <th scope="row">M5</th>
+              <td>Platform release candidate</td>
+              <td>June 30, 2029</td>
+              <td>Are inventory, allocation, and offline mode feature-complete, with only hardening left?</td>
+            </tr>
+            <tr>
+              <th scope="row">M6</th>
+              <td>Full-scale exercise passed</td>
+              <td>September 30, 2029</td>
+              <td>Did stock, fleet, people, and the disconnected platform work on the same day, and are critical defects closed?</td>
+            </tr>
+            <tr>
+              <th scope="row">M7</th>
+              <td>Handover and project close</td>
+              <td>December 31, 2029</td>
+              <td>Have receivers accepted operational ownership, including an operating budget that the project will not pay after this date?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="path">Critical path and float</h2>
+      <p>The driving path into December 31, 2029 is: charter and sites, Abbotsford design, Abbotsford construction, commissioning of the five-hub network, first-fill of reserves into accepted rooms, full-scale exercise, defect closeout, and handover. Design slippage on the prototype hub moves every downstream date. That is why M3 exists in 2028. A hub that is pretty in June 2029 and stocked in November has missed the exercise, and an unexercised warehouse is not an accepted deliverable.</p>
+      <p>The platform path is parallel and joins the driving path at M6. Spiral 5 has little float. Spirals 2 through 4 have float only for features that are not on the exercise script. Fleet initial capability in March 2029 has about two quarters of float before the exercise, which is deliberate: drivers need time on the vehicles before a scored scenario. Community-grant administration has the most float and is the wrong place to “catch up” by stealing staff from commissioning.</p>
+      <p>Hope is not the longest construction path, but it is the path with the least strategic float. If floodwater splits the valley, stock west of the break cannot serve Hope, Harrison, and parts of the eastern corridor. The schedule may float Hope’s interior finishes. It may not float Hope’s weather-tight reserve room past the 2029 first-fill window.</p>
+
+      <h2 id="control">Baseline and change control</h2>
+      <p>After M2, scope, schedule, and cost are one baseline. A change to any one of them is a change request. The project manager may approve substitutions that do not move a milestone, do not spend contingency, and do not alter food-safety or accessibility acceptance criteria. Everything else goes to a change board chaired by the program director, with the quality lead present and with a direct report to the scenario sponsor when a request would consume management reserve or cut protected scope.</p>
+      <p>Monthly control uses earned value in a form municipal sponsors can read: planned value, earned value, actual cost, schedule variance, cost variance, the schedule performance index, and the cost performance index (PMI, 2017). A index below 1.0 for two consecutive months on the hub path triggers a recovery plan at the next monthly review, not at the next annual report. Quarterly gates can stop a work package. The program date itself is not moved. If the date cannot be met inside the ceiling, the board removes scope from the bottom of the descoping ladder and records the value that was given up.</p>
+      <p>Time reserves sit inside the bars as management float on non-critical packages. They are not a silent fourth quarter after December 2029. Closing activities start in July 2029 while punch-list work is still underway, because contract novation, privacy schedules, and receiver budget votes take longer than a ribbon cutting.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-meta">Scenario window: January 1, 2027 – December 31, 2029 · Ceiling: CAD $1,000,000,000 (hypothetical)</p>
+      <p class="disclaimer">Academic project proposal for UFV / Chaacha. All funding allocations, partnerships, and facility upgrades are hypothetical.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
