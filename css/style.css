@@ -351,6 +351,32 @@ article p {
   border-left-color: var(--teal);
 }
 
+.featured-image {
+  margin: 2rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(22, 61, 50, 0.08);
+  border: 1px solid var(--border, #E2E8E4);
+  background-color: #FFFFFF;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-image figcaption {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.85rem;
+  color: #556B62;
+  background: #FAFBFA;
+  border-top: 1px solid var(--border, #E2E8E4);
+  font-style: italic;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
